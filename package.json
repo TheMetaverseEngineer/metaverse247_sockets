@@ -1,0 +1,14 @@
+{
+  "name": "metaverse247_sockets",
+  "version": "0.0.1",
+  "description": "multi player and multi metaverse sockets build by metaverse247",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.15.2",
+    "socket.io": "^2.2.0"
+  },
+  "scripts": {
+    "start": "PORT=3000 node app.js",
+    "dev": "PORT=3001 nodemon app.js"
+  }
+}
