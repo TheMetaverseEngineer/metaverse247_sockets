@@ -8,7 +8,8 @@
     "socket.io": "^2.2.0"
   },
   "scripts": {
-    "start": "PORT=3000 node app.js",
-    "dev": "PORT=3001 nodemon app.js"
+    "start": "SET PORT=3000 && node app.js",
+    "start_linux": "PORT=3000 node app.js",
+    "dev_linux": "PORT=3001 nodemon app.js"
   }
 }

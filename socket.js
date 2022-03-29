@@ -89,6 +89,7 @@ const lunchSocket = (server) => {
         });
 
         socket.on('init', function (data) {
+            console.log("INIT" , data)
             if (sockets[data.room] == undefined) {
                 sockets[data.room] = {
                     members: [],
