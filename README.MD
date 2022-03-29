@@ -1,5 +1,5 @@
 # Metaverse247.live Sockets
-use this line for conecting to socket server:
+use this line for connecting to socket server:
 
     socket = io.connect("https://localhost:3000", { secure: true });
 
