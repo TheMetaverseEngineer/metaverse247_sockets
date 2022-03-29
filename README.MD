@@ -1,14 +1,14 @@
-# Metaverse247 Sockets
-use this line for coonecting to socket server:
+# Metaverse247.live Sockets
+use this line for conecting to socket server:
 
     socket = io.connect("https://localhost:3000", { secure: true });
 
 example of using socket in your frontend:
 
     socket.emit('init', {
-            model: "policeman",
+            model: "metahuman",
             user: "ojIckSD2jqNzOqIrAGzL",
-            room: "metaverse247",
+            room: "metaverse247live",
             color: "white",
             x: 12565,
             y: 0,
@@ -87,7 +87,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
 
 
@@ -96,7 +96,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
 
 - newUserStart : accept and join to video chat
@@ -104,7 +104,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id 
     | sender | String | sender id
 
 - videoSdp : send and receive sdp offer over WEBRTC
@@ -112,7 +112,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
     | description | String | local description generated from webrtc adapter
 
@@ -121,7 +121,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
 
 - voicechatRequest : send voice chat request to another user
@@ -129,7 +129,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
 
 - newUserStartVoice : accept and join to voice chat
@@ -137,7 +137,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
 
 - voiceSdp : send and receive sdp offer over WEBRTC
@@ -145,7 +145,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
     | description | String | local description generated from webrtc adapter
 
@@ -154,7 +154,7 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
 
 - ice candidates : setup ice candidate over WEBRTC for video chat , voice chat and screen sharing
@@ -162,6 +162,6 @@ example of using socket in your frontend:
     data object parameters:
     | key | Type | description |
     | ------ | ------ | ----- |
-    | to | String | receiver , for screen sharing set it to 'all' 
+    | to | String | receiver id
     | sender | String | sender id
     | candidate | String | ice candidate generated from webrtc adapter
